@@ -20,6 +20,14 @@
 		192DB1DC23B14302009CD6F5 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 192DB1DB23B14302009CD6F5 /* Home.storyboard */; };
 		192DB1DE23B14327009CD6F5 /* Categories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 192DB1DD23B14327009CD6F5 /* Categories.storyboard */; };
 		192DB1E023B14344009CD6F5 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 192DB1DF23B14344009CD6F5 /* Profile.storyboard */; };
+		192DB1E423B14CB3009CD6F5 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192DB1E323B14CB3009CD6F5 /* Movie.swift */; };
+		192DB1E823B14DE3009CD6F5 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 192DB1E723B14DE3009CD6F5 /* ObjectMapper.framework */; };
+		192DB1EA23B14DF3009CD6F5 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 192DB1E923B14DF3009CD6F5 /* Realm.framework */; };
+		192DB1EC23B14E05009CD6F5 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 192DB1EB23B14E05009CD6F5 /* Kingfisher.framework */; };
+		192DB1EE23B14E12009CD6F5 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 192DB1ED23B14E12009CD6F5 /* Alamofire.framework */; };
+		192DB1F123B1523E009CD6F5 /* MovieStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192DB1F023B1523E009CD6F5 /* MovieStore.swift */; };
+		192DB1F323B15510009CD6F5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192DB1F223B15510009CD6F5 /* HomeViewController.swift */; };
+		192DB1F523B15B6E009CD6F5 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192DB1F423B15B6E009CD6F5 /* Result.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,10 +63,18 @@
 		192DB1B723B11C50009CD6F5 /* movies_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = movies_appUITests.swift; sourceTree = "<group>"; };
 		192DB1B923B11C50009CD6F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		192DB1C623B12461009CD6F5 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
-		192DB1D923B141E2009CD6F5 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Home.storyboard; path = "movies-app/Application/Main/Home/Home.storyboard"; sourceTree = "<group>"; };
+		192DB1D923B141E2009CD6F5 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		192DB1DB23B14302009CD6F5 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Home.storyboard; path = "movies-app/Application/Main/Home/Home.storyboard"; sourceTree = "<group>"; };
-		192DB1DD23B14327009CD6F5 /* Categories.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Categories.storyboard; path = "movies-app/Application/Main/Categories/Categories.storyboard"; sourceTree = "<group>"; };
-		192DB1DF23B14344009CD6F5 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Profile.storyboard; path = "movies-app/Application/Main/Profile/Profile.storyboard"; sourceTree = "<group>"; };
+		192DB1DD23B14327009CD6F5 /* Categories.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Categories.storyboard; sourceTree = "<group>"; };
+		192DB1DF23B14344009CD6F5 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		192DB1E323B14CB3009CD6F5 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		192DB1E723B14DE3009CD6F5 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = SOURCE_ROOT; };
+		192DB1E923B14DF3009CD6F5 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = SOURCE_ROOT; };
+		192DB1EB23B14E05009CD6F5 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = SOURCE_ROOT; };
+		192DB1ED23B14E12009CD6F5 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = SOURCE_ROOT; };
+		192DB1F023B1523E009CD6F5 /* MovieStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieStore.swift; sourceTree = "<group>"; };
+		192DB1F223B15510009CD6F5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		192DB1F423B15B6E009CD6F5 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +82,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				192DB1EA23B14DF3009CD6F5 /* Realm.framework in Frameworks */,
+				192DB1EC23B14E05009CD6F5 /* Kingfisher.framework in Frameworks */,
+				192DB1E823B14DE3009CD6F5 /* ObjectMapper.framework in Frameworks */,
+				192DB1EE23B14E12009CD6F5 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,10 +109,7 @@
 		192DB18923B11C4D009CD6F5 = {
 			isa = PBXGroup;
 			children = (
-				192DB1DF23B14344009CD6F5 /* Profile.storyboard */,
-				192DB1DD23B14327009CD6F5 /* Categories.storyboard */,
 				192DB1DB23B14302009CD6F5 /* Home.storyboard */,
-				192DB1D923B141E2009CD6F5 /* Home.storyboard */,
 				192DB19423B11C4D009CD6F5 /* movies-app */,
 				192DB1AB23B11C50009CD6F5 /* movies-appTests */,
 				192DB1B623B11C50009CD6F5 /* movies-appUITests */,
@@ -113,6 +130,7 @@
 		192DB19423B11C4D009CD6F5 /* movies-app */ = {
 			isa = PBXGroup;
 			children = (
+				192DB1E623B14DCD009CD6F5 /* Framework */,
 				192DB1CC23B12BA8009CD6F5 /* Resources */,
 				192DB1C923B12B2F009CD6F5 /* Application */,
 				192DB1C823B12B13009CD6F5 /* Base */,
@@ -169,6 +187,8 @@
 		192DB1CA23B12B4D009CD6F5 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				192DB1E223B14BA7009CD6F5 /* Models */,
+				192DB1E123B14B9F009CD6F5 /* Store */,
 				192DB1D623B13A4F009CD6F5 /* Profile */,
 				192DB1D123B13924009CD6F5 /* Categories */,
 				192DB1D023B13914009CD6F5 /* Home */,
@@ -221,6 +241,8 @@
 		192DB1D023B13914009CD6F5 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				192DB1D923B141E2009CD6F5 /* Home.storyboard */,
+				192DB1F223B15510009CD6F5 /* HomeViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -228,6 +250,7 @@
 		192DB1D123B13924009CD6F5 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				192DB1DD23B14327009CD6F5 /* Categories.storyboard */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -235,8 +258,45 @@
 		192DB1D623B13A4F009CD6F5 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				192DB1DF23B14344009CD6F5 /* Profile.storyboard */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		192DB1E123B14B9F009CD6F5 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				192DB1EF23B15214009CD6F5 /* MovieStore */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		192DB1E223B14BA7009CD6F5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				192DB1E323B14CB3009CD6F5 /* Movie.swift */,
+				192DB1F423B15B6E009CD6F5 /* Result.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		192DB1E623B14DCD009CD6F5 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				192DB1ED23B14E12009CD6F5 /* Alamofire.framework */,
+				192DB1EB23B14E05009CD6F5 /* Kingfisher.framework */,
+				192DB1E923B14DF3009CD6F5 /* Realm.framework */,
+				192DB1E723B14DE3009CD6F5 /* ObjectMapper.framework */,
+			);
+			path = Framework;
+			sourceTree = "<group>";
+		};
+		192DB1EF23B15214009CD6F5 /* MovieStore */ = {
+			isa = PBXGroup;
+			children = (
+				192DB1F023B1523E009CD6F5 /* MovieStore.swift */,
+			);
+			path = MovieStore;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,6 +309,7 @@
 				192DB18E23B11C4D009CD6F5 /* Sources */,
 				192DB18F23B11C4D009CD6F5 /* Frameworks */,
 				192DB19023B11C4D009CD6F5 /* Resources */,
+				192DB1E523B14CD4009CD6F5 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -369,6 +430,30 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		192DB1E523B14CD4009CD6F5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ObjectMapper.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		192DB18E23B11C4D009CD6F5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -378,6 +463,10 @@
 				192DB1C723B12461009CD6F5 /* Config.swift in Sources */,
 				192DB19623B11C4D009CD6F5 /* AppDelegate.swift in Sources */,
 				192DB19823B11C4D009CD6F5 /* SceneDelegate.swift in Sources */,
+				192DB1F123B1523E009CD6F5 /* MovieStore.swift in Sources */,
+				192DB1F323B15510009CD6F5 /* HomeViewController.swift in Sources */,
+				192DB1F523B15B6E009CD6F5 /* Result.swift in Sources */,
+				192DB1E423B14CB3009CD6F5 /* Movie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -552,6 +641,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QT54HG2RDT;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "movies-app/Base/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -570,6 +663,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QT54HG2RDT;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "movies-app/Base/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
