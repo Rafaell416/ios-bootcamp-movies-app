@@ -15,6 +15,7 @@
 		192DB1A223B11C50009CD6F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 192DB1A023B11C50009CD6F5 /* LaunchScreen.storyboard */; };
 		192DB1AD23B11C50009CD6F5 /* movies_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192DB1AC23B11C50009CD6F5 /* movies_appTests.swift */; };
 		192DB1B823B11C50009CD6F5 /* movies_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192DB1B723B11C50009CD6F5 /* movies_appUITests.swift */; };
+		192DB1C723B12461009CD6F5 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192DB1C623B12461009CD6F5 /* Config.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		192DB1B323B11C50009CD6F5 /* movies-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "movies-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		192DB1B723B11C50009CD6F5 /* movies_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = movies_appUITests.swift; sourceTree = "<group>"; };
 		192DB1B923B11C50009CD6F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		192DB1C623B12461009CD6F5 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		192DB19423B11C4D009CD6F5 /* movies-app */ = {
 			isa = PBXGroup;
 			children = (
+				192DB1C523B12448009CD6F5 /* Utils */,
 				192DB19523B11C4D009CD6F5 /* AppDelegate.swift */,
 				192DB19723B11C4D009CD6F5 /* SceneDelegate.swift */,
 				192DB19923B11C4D009CD6F5 /* ViewController.swift */,
@@ -126,6 +129,14 @@
 				192DB1B923B11C50009CD6F5 /* Info.plist */,
 			);
 			path = "movies-appUITests";
+			sourceTree = "<group>";
+		};
+		192DB1C523B12448009CD6F5 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				192DB1C623B12461009CD6F5 /* Config.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				192DB19A23B11C4D009CD6F5 /* ViewController.swift in Sources */,
+				192DB1C723B12461009CD6F5 /* Config.swift in Sources */,
 				192DB19623B11C4D009CD6F5 /* AppDelegate.swift in Sources */,
 				192DB19823B11C4D009CD6F5 /* SceneDelegate.swift in Sources */,
 			);
