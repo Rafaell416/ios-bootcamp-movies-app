@@ -1,0 +1,4 @@
+github "Alamofire/Alamofire" "5.0.0-rc.3"
+github "onevcat/Kingfisher" "5.12.0"
+github "realm/realm-cocoa" "v4.3.0"
+github "tristanhimmelman/ObjectMapper" "3.5.1"
