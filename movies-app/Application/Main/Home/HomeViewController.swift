@@ -1,0 +1,29 @@
+//
+//  HomeViewController.swift
+//  movies-app
+//
+//  Created by Juanse  on 23/12/19.
+//  Copyright © 2019 Rafael Villarreal. All rights reserved.
+//
+
+import UIKit
+
+class HomeViewController: UIViewController {
+    
+    @IBOutlet weak var moviesTableView: UITableView!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        config()
+        // Do any additional setup after loading the view.
+    }
+    
+
+    func config() {
+        moviesTableView.delegate = self
+        moviesTableView.dataSource = self
+        moviesTableView.estimatedRowHeight = 100
+        moviesTableView.separatorStyle = .none
+        moviesTableView.allowsSelection = false
+    }
+
+}

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="gTV-IL-0wX" customClass="CollectionViewCell" customModule="movies_app" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="300"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="200" height="300"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eRJ-Xd-Lyb">
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="300"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="e5O-sp-Ckv">
+                                <rect key="frame" x="0.0" y="0.0" width="200" height="300"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="joker-poster" translatesAutoresizingMaskIntoConstraints="NO" id="3ub-0i-uBb">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="274.5"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Joker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pCk-O5-DSZ">
+                                        <rect key="frame" x="0.0" y="279.5" width="200" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="e5O-sp-Ckv" firstAttribute="leading" secondItem="eRJ-Xd-Lyb" secondAttribute="leading" id="9Sm-8v-3GJ"/>
+                            <constraint firstAttribute="trailing" secondItem="e5O-sp-Ckv" secondAttribute="trailing" id="CBs-tE-V8S"/>
+                            <constraint firstItem="e5O-sp-Ckv" firstAttribute="top" secondItem="eRJ-Xd-Lyb" secondAttribute="top" id="G0p-Ed-7gd"/>
+                            <constraint firstAttribute="height" constant="300" id="Jsb-6G-79k"/>
+                            <constraint firstAttribute="bottom" secondItem="e5O-sp-Ckv" secondAttribute="bottom" id="niT-zR-zwE"/>
+                            <constraint firstAttribute="width" constant="200" id="osN-ea-3c9"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="eRJ-Xd-Lyb" secondAttribute="trailing" id="3dd-uq-eGw"/>
+                <constraint firstItem="eRJ-Xd-Lyb" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="5Ai-iJ-CH3"/>
+                <constraint firstAttribute="bottom" secondItem="eRJ-Xd-Lyb" secondAttribute="bottom" id="80V-Os-khX"/>
+                <constraint firstItem="eRJ-Xd-Lyb" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="tYH-l3-CZF"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <point key="canvasLocation" x="137.68115942028987" y="144.64285714285714"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="joker-poster" width="980" height="1453"/>
+    </resources>
+</document>
