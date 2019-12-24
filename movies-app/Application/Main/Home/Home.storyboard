@@ -84,13 +84,14 @@
                                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8JP-pi-kgW">
                                                                                                 <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
                                                                                                 <subviews>
-                                                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="joker-poster" translatesAutoresizingMaskIntoConstraints="NO" id="RNu-g7-idO">
+                                                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="20O-uC-DfE">
                                                                                                         <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
                                                                                                         <constraints>
-                                                                                                            <constraint firstAttribute="width" constant="150" id="ap7-ik-qda"/>
-                                                                                                            <constraint firstAttribute="height" constant="200" id="jWN-Jv-tXo"/>
+                                                                                                            <constraint firstAttribute="width" constant="150" id="ddr-ui-GIm"/>
+                                                                                                            <constraint firstAttribute="height" constant="200" id="vd1-Du-Tal"/>
                                                                                                         </constraints>
-                                                                                                    </imageView>
+                                                                                                        <state key="normal" backgroundImage="joker-poster"/>
+                                                                                                    </button>
                                                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IwK-V2-7Lu">
                                                                                                         <rect key="frame" x="94" y="10" width="46" height="22"/>
                                                                                                         <subviews>
@@ -112,11 +113,11 @@
                                                                                                 </subviews>
                                                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                                                                 <constraints>
-                                                                                                    <constraint firstItem="RNu-g7-idO" firstAttribute="leading" secondItem="8JP-pi-kgW" secondAttribute="leading" id="9M8-sK-3ou"/>
-                                                                                                    <constraint firstAttribute="bottom" secondItem="RNu-g7-idO" secondAttribute="bottom" id="YUL-h9-9Jf"/>
+                                                                                                    <constraint firstItem="20O-uC-DfE" firstAttribute="leading" secondItem="8JP-pi-kgW" secondAttribute="leading" id="1lG-D0-XFr"/>
+                                                                                                    <constraint firstAttribute="trailing" secondItem="20O-uC-DfE" secondAttribute="trailing" id="5pB-d3-WT7"/>
+                                                                                                    <constraint firstAttribute="bottom" secondItem="20O-uC-DfE" secondAttribute="bottom" id="L4K-na-thp"/>
                                                                                                     <constraint firstAttribute="trailing" secondItem="IwK-V2-7Lu" secondAttribute="trailing" constant="10" id="cVy-Ce-77S"/>
-                                                                                                    <constraint firstItem="RNu-g7-idO" firstAttribute="top" secondItem="8JP-pi-kgW" secondAttribute="top" id="nGi-VL-RR7"/>
-                                                                                                    <constraint firstAttribute="trailing" secondItem="RNu-g7-idO" secondAttribute="trailing" id="q42-Oa-SYb"/>
+                                                                                                    <constraint firstItem="20O-uC-DfE" firstAttribute="top" secondItem="8JP-pi-kgW" secondAttribute="top" id="nDL-GT-lyA"/>
                                                                                                     <constraint firstItem="IwK-V2-7Lu" firstAttribute="top" secondItem="8JP-pi-kgW" secondAttribute="top" constant="10" id="wKp-d7-876"/>
                                                                                                 </constraints>
                                                                                             </view>
@@ -163,7 +164,7 @@
                                                                             </collectionViewCellContentView>
                                                                             <connections>
                                                                                 <outlet property="movieCharacteristicsLabel" destination="1O6-Pn-2aa" id="haz-Nt-LS7"/>
-                                                                                <outlet property="moviePosterImageView" destination="RNu-g7-idO" id="I8l-af-EBU"/>
+                                                                                <outlet property="moviePosterButton" destination="20O-uC-DfE" id="PFE-53-vHi"/>
                                                                                 <outlet property="movieTitleLabel" destination="9XL-8C-SkT" id="mtC-7g-Na2"/>
                                                                                 <outlet property="movieYearLabel" destination="Bcy-RD-baX" id="AFj-fS-6ra"/>
                                                                                 <outlet property="movieYearView" destination="IwK-V2-7Lu" id="wGP-MX-Trf"/>
@@ -197,12 +198,12 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="BrG-8C-1cd" secondAttribute="trailing" id="81n-IV-tMD"/>
-                            <constraint firstAttribute="bottom" secondItem="BrG-8C-1cd" secondAttribute="bottom" id="CFI-EJ-Gdp"/>
-                            <constraint firstItem="BrG-8C-1cd" firstAttribute="top" secondItem="gu7-s8-T8U" secondAttribute="top" id="NHp-gp-T3S"/>
-                            <constraint firstItem="BrG-8C-1cd" firstAttribute="leading" secondItem="u5A-0n-iOg" secondAttribute="leading" id="xQV-Ob-w0m"/>
+                            <constraint firstItem="BrG-8C-1cd" firstAttribute="leading" secondItem="u5A-0n-iOg" secondAttribute="leading" id="OVj-Ou-M1l"/>
+                            <constraint firstItem="u5A-0n-iOg" firstAttribute="trailing" secondItem="BrG-8C-1cd" secondAttribute="trailing" id="geV-TE-8bP"/>
+                            <constraint firstItem="BrG-8C-1cd" firstAttribute="bottom" secondItem="u5A-0n-iOg" secondAttribute="bottom" constant="34" id="s7J-nd-TIQ"/>
+                            <constraint firstItem="u5A-0n-iOg" firstAttribute="top" secondItem="BrG-8C-1cd" secondAttribute="top" constant="88" id="zFJ-Sa-z7d"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="u5A-0n-iOg"/>
                     </view>

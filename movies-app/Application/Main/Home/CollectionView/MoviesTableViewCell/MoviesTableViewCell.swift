@@ -29,9 +29,9 @@ class MoviesTableViewCell: UITableViewCell,  UICollectionViewDelegate, UICollect
     }
         
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        print(1)
         let cell: MoviesCollectionViewCell = sectionCollectionView.dequeueReusableCell(withReuseIdentifier: "sectionCollectionViewCell", for: indexPath) as! MoviesCollectionViewCell
-        cell.moviePosterImageView.layer.cornerRadius = 20
+        cell.moviePosterButton.layer.masksToBounds = true
+        cell.moviePosterButton.layer.cornerRadius = 20
         cell.movieYearView.layer.cornerRadius = 10
         
         return cell
