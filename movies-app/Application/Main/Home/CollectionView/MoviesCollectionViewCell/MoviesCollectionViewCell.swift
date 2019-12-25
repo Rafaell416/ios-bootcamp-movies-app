@@ -19,5 +19,6 @@ class MoviesCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
     }
+    
 
 }

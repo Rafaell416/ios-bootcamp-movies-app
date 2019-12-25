@@ -27,5 +27,9 @@ class HomeViewController: UIViewController {
         moviesTableView.separatorStyle = .none
         moviesTableView.allowsSelection = false
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+    }
 
 }

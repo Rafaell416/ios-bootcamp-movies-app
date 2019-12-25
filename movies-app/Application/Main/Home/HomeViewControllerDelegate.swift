@@ -27,6 +27,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         moviesCell.sectionCollectionView.reloadData()
         return moviesCell
     }
+    
+
 }
 
 
