@@ -25,4 +25,8 @@ struct MovieStore {
             }
         }
     }
+    
+    func fetchTopRatedMovies(_ completion: @escaping(_ movies: [Movie]?) -> Void) {
+        let topRatedMovies = ""
+    }
 }

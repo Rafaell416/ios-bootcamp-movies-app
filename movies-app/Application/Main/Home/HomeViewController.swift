@@ -15,24 +15,30 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var moviesTableView: UITableView!
     
     var movieStore = MovieStore()
-    
     let realm = try! Realm()
-    
-    
+    let moviesList = Movies()
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         config()
         // Do any additional setup after loading the view.
         getUpcommingMovies()
+        
+        print(Realm.Configuration.defaultConfiguration)
     }
     
     func getUpcommingMovies () {
-        print(realm)
         movieStore.fetchUpcomingMovies { (movies) in
             guard let moviesDictionary = movies else { return }
+
             for movie in moviesDictionary {
-                
+                self.moviesList.upcommingMovies.append(movie)
             }
+            
+            try! self.realm.write {
+                self.realm.add(self.moviesList)
+            }
+            
         }
     }
     
