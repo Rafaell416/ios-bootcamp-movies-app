@@ -16,9 +16,9 @@ class HomeViewController: UIViewController {
     
     var movieStore = MovieStore()
     let realm = try! Realm()
-    let upcommingMoviesList = Movies()
-    let topRatedMoviesList = Movies()
-    let playingNowMoviesList = Movies()
+    let upcommingMoviesList = UpcomingMovies()
+    let topRatedMoviesList = TopRatedMovies()
+    let playingNowMoviesList = PlayingNowMovies()
             
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +39,7 @@ class HomeViewController: UIViewController {
         movieStore.fetchUpcomingMovies { (upcommingMovies) in
             guard let upcommingMoviesDictionary = upcommingMovies else { return }
             for upcommingMovie in upcommingMoviesDictionary {
-                self.upcommingMoviesList.upcommingMovies.append(upcommingMovie)
+                self.upcommingMoviesList.movies.append(upcommingMovie)
             }
             try! self.realm.write {
                 self.realm.add(self.upcommingMoviesList)
@@ -52,7 +52,7 @@ class HomeViewController: UIViewController {
         movieStore.fetchTopRatedMovies { (topRatedMovies) in
             guard let topRatedMoviesDictionary = topRatedMovies else { return }
             for topRatedMovie in topRatedMoviesDictionary {
-                self.topRatedMoviesList.topRatedMovies.append(topRatedMovie)
+                self.topRatedMoviesList.movies.append(topRatedMovie)
             }
             try! self.realm.write {
                 self.realm.add(self.topRatedMoviesList)
@@ -64,7 +64,7 @@ class HomeViewController: UIViewController {
         movieStore.fetchPlayingNowMovies { (playingnowMovies) in
             guard let playingNowMoviesDictionary = playingnowMovies else { return }
             for playingNowMovie in playingNowMoviesDictionary {
-                self.playingNowMoviesList.playingNowMovies.append(playingNowMovie)
+                self.playingNowMoviesList.movies.append(playingNowMovie)
             }
             try! self.realm.write {
                 self.realm.add(self.playingNowMoviesList)

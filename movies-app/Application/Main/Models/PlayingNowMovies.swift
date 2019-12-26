@@ -1,5 +1,5 @@
 //
-//  Movies.swift
+//  PlayingNowMovies.swift
 //  movies-app
 //
 //  Created by Rafael Villarreal on 12/26/19.
@@ -9,8 +9,6 @@
 import Foundation
 import RealmSwift
 
-class Movies: Object {
-    let upcommingMovies = List<Movie>()
-    let topRatedMovies = List<Movie>()
-    let playingNowMovies = List<Movie>()
+class PlayingNowMovies: Object {
+    let movies = List<Movie>()
 }
