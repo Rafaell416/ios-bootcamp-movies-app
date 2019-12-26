@@ -20,12 +20,12 @@ class HomeViewController: UIViewController {
     
 
     func config() {
-        view.backgroundColor = UIColor(red: 8, green: 15, blue: 40, alpha: 1)
         moviesTableView.delegate = self
         moviesTableView.dataSource = self
         moviesTableView.estimatedRowHeight = 100
         moviesTableView.separatorStyle = .none
         moviesTableView.allowsSelection = false
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

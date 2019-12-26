@@ -10,12 +10,17 @@ import UIKit
 
 class MovieDetailViewController: UIViewController {
 
+    @IBOutlet weak var movieCastCollectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        config()
         // Do any additional setup after loading the view.
     }
     
+    func config() {
 
+        movieCastCollectionView.delegate = self
+        movieCastCollectionView.dataSource = self
+    }
 
 }
