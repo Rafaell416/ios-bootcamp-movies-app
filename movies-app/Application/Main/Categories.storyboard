@@ -17,28 +17,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="-25" translatesAutoresizingMaskIntoConstraints="NO" id="isY-Nw-KKi">
-                                <rect key="frame" x="20" y="160" width="374" height="40"/>
+                                <rect key="frame" x="20" y="160" width="374" height="56"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Movies, categories, or shows" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G9I-80-mUX">
-                                        <rect key="frame" x="0.0" y="0.0" width="379" height="40"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="exq-ZY-xQp">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="56"/>
+                                        <subviews>
+                                            <searchBar contentMode="redraw" barStyle="black" searchBarStyle="minimal" placeholder="Movies, Categories, or TV Shows" translatesAutoresizingMaskIntoConstraints="NO" id="BSU-mo-aDK">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="56"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </searchBar>
+                                        </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="HDN-0b-LHW"/>
+                                            <constraint firstAttribute="bottom" secondItem="BSU-mo-aDK" secondAttribute="bottom" id="9Ne-QL-FnQ"/>
+                                            <constraint firstAttribute="trailing" secondItem="BSU-mo-aDK" secondAttribute="trailing" id="XxW-oY-z25"/>
+                                            <constraint firstItem="BSU-mo-aDK" firstAttribute="leading" secondItem="exq-ZY-xQp" secondAttribute="leading" id="cL4-Ax-5nY"/>
+                                            <constraint firstItem="BSU-mo-aDK" firstAttribute="top" secondItem="exq-ZY-xQp" secondAttribute="top" id="dwM-8Y-dkw"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="jvC-b0-H7L">
-                                        <rect key="frame" x="354" y="11" width="20" height="18"/>
-                                        <color key="tintColor" red="0.1058823529" green="0.1058823529" blue="0.1058823529" alpha="0.90290560789999996" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="20" id="2U4-dd-d7w"/>
-                                            <constraint firstAttribute="width" constant="20" id="sz7-V4-QfM"/>
-                                        </constraints>
-                                    </imageView>
+                                    </view>
                                 </subviews>
                             </stackView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="V7W-0T-BeE">
-                                <rect key="frame" x="20" y="220" width="374" height="622"/>
+                                <rect key="frame" x="20" y="236" width="374" height="606"/>
                                 <color key="backgroundColor" red="0.0" green="0.10980392156862745" blue="0.33333333333333331" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="MeT-Cf-NCN">
                                     <size key="itemSize" width="50" height="50"/>
@@ -46,6 +45,13 @@
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
+                                <containerView key="backgroundView" hidden="YES" opaque="NO" contentMode="scaleToFill" id="gDT-kL-v6E">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="606"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                    <connections>
+                                        <segue destination="LtI-UA-BjN" kind="embed" identifier="showMovieResults" id="qjC-YE-KIS"/>
+                                    </connections>
+                                </containerView>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="movieCategoryCollectionViewCell" id="pdd-38-9vv" customClass="CategoriesCollectionViewCell" customModule="movies_app" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="165" height="100"/>
@@ -153,9 +159,69 @@
             </objects>
             <point key="canvasLocation" x="1266.6666666666667" y="126.5625"/>
         </scene>
+        <!--Movie Results View Controller-->
+        <scene sceneID="Zk5-sM-0H1">
+            <objects>
+                <viewController id="LtI-UA-BjN" customClass="MovieResultsViewController" customModule="movies_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tTz-be-clF">
+                        <rect key="frame" x="0.0" y="0.0" width="374" height="606"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SwF-SM-dJP">
+                                <rect key="frame" x="0.0" y="0.0" width="374" height="606"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5F0-cb-gGG">
+                                    <size key="itemSize" width="140" height="200"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="movieResultsCollectionViewCell" id="us3-dv-SDr" customClass="MovieResultsCollectionViewCell" customModule="movies_app" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="140" height="200"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="DHQ-rl-XOK">
+                                            <rect key="frame" x="0.0" y="0.0" width="140" height="200"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="joker-poster" translatesAutoresizingMaskIntoConstraints="NO" id="rWi-H0-UBf">
+                                                    <rect key="frame" x="0.0" y="0.0" width="140" height="200"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="rWi-H0-UBf" firstAttribute="top" secondItem="DHQ-rl-XOK" secondAttribute="top" id="0XJ-8F-aPC"/>
+                                                <constraint firstItem="rWi-H0-UBf" firstAttribute="leading" secondItem="DHQ-rl-XOK" secondAttribute="leading" id="782-Su-8uZ"/>
+                                                <constraint firstAttribute="bottom" secondItem="rWi-H0-UBf" secondAttribute="bottom" id="9wD-zc-89t"/>
+                                                <constraint firstAttribute="trailing" secondItem="rWi-H0-UBf" secondAttribute="trailing" id="sBK-kH-G41"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="140" height="200"/>
+                                        <connections>
+                                            <outlet property="movieResultPosterImageView" destination="rWi-H0-UBf" id="XdJ-Jp-y2x"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="SwF-SM-dJP" secondAttribute="trailing" id="1ru-E4-Er7"/>
+                            <constraint firstItem="SwF-SM-dJP" firstAttribute="top" secondItem="tTz-be-clF" secondAttribute="top" id="ODa-mR-hdz"/>
+                            <constraint firstAttribute="bottom" secondItem="SwF-SM-dJP" secondAttribute="bottom" id="QK1-e4-GX4"/>
+                            <constraint firstItem="SwF-SM-dJP" firstAttribute="leading" secondItem="tTz-be-clF" secondAttribute="leading" id="g0Z-9f-D53"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2eQ-GS-gCi"/>
+                    </view>
+                    <connections>
+                        <outlet property="movieResultsCollectionView" destination="SwF-SM-dJP" id="lh9-iA-VCL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JBe-VT-Cln" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2976.811594202899" y="112.5"/>
+        </scene>
     </scenes>
     <resources>
         <image name="joker-poster" width="980" height="1453"/>
-        <image name="magnifyingglass" catalog="system" width="64" height="56"/>
     </resources>
 </document>

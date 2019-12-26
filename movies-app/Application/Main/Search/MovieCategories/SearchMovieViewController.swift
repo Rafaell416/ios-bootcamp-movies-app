@@ -19,6 +19,8 @@ class SearchMovieViewController: UIViewController {
         config()
     }
     
+    
+    
     func config() {
         categoriesCollectionView.delegate = self
         categoriesCollectionView.dataSource = self
