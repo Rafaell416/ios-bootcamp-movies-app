@@ -15,6 +15,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.1137254902" green="0.10980392160000001" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                     </tabBar>
                     <connections>
                         <segue destination="V31-Z2-bRK" kind="relationship" relationship="viewControllers" id="QWd-ed-96R"/>
@@ -30,7 +32,7 @@
         <scene sceneID="Tq5-Qz-laH">
             <objects>
                 <viewControllerPlaceholder storyboardName="Home" id="V31-Z2-bRK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="WPc-bS-8fX"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="square.and.arrow.up.fill" catalog="system" id="WPc-bS-8fX"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EMC-qM-L10" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -58,8 +60,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="house.fill" catalog="system" width="64" height="52"/>
         <image name="magnifyingglass" catalog="system" width="64" height="56"/>
         <image name="person" catalog="system" width="64" height="58"/>
+        <image name="square.and.arrow.up.fill" catalog="system" width="56" height="64"/>
     </resources>
 </document>

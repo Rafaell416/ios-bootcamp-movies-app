@@ -441,7 +441,7 @@
                                                                                             <rect key="frame" x="0.0" y="0.0" width="102" height="180"/>
                                                                                             <subviews>
                                                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="joaquin" translatesAutoresizingMaskIntoConstraints="NO" id="C5i-eE-XRR">
-                                                                                                    <rect key="frame" x="1" y="0.0" width="100.00000000000006" height="125"/>
+                                                                                                    <rect key="frame" x="1" y="0.0" width="100" height="125"/>
                                                                                                     <constraints>
                                                                                                         <constraint firstAttribute="height" constant="125" id="2cO-2E-sHL"/>
                                                                                                         <constraint firstAttribute="width" constant="100" id="U8N-sc-KIe"/>
@@ -525,7 +525,7 @@
         <scene sceneID="h38-uU-xGV">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="e1l-4g-9li" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="house.fill" catalog="system" id="Mmk-wE-XEE"/>
+                    <tabBarItem key="tabBarItem" title="" image="house" catalog="system" id="Mmk-wE-XEE"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="plM-OS-dC2">
@@ -553,7 +553,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="house.fill" catalog="system" width="64" height="52"/>
+        <image name="house" catalog="system" width="64" height="54"/>
         <image name="joaquin" width="214" height="317"/>
         <image name="joker-poster" width="980" height="1453"/>
         <image name="star.fill" catalog="system" width="64" height="58"/>

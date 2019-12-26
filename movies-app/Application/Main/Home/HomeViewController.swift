@@ -18,10 +18,6 @@ class HomeViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-           return .lightContent 
-       }
-
     func config() {
         moviesTableView.delegate = self
         moviesTableView.dataSource = self
@@ -30,6 +26,7 @@ class HomeViewController: UIViewController {
         moviesTableView.allowsSelection = false
         
     }
+   
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
