@@ -24,7 +24,6 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let moviesCell: MoviesTableViewCell = moviesTableView.dequeueReusableCell(withIdentifier: "moviesTableViewCell") as! MoviesTableViewCell
-        moviesCell.sectionCollectionView.reloadData()
         return moviesCell
     }
     

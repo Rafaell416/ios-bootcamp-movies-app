@@ -441,7 +441,7 @@
                                                                                             <rect key="frame" x="0.0" y="0.0" width="102" height="180"/>
                                                                                             <subviews>
                                                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="joaquin" translatesAutoresizingMaskIntoConstraints="NO" id="C5i-eE-XRR">
-                                                                                                    <rect key="frame" x="1" y="0.0" width="100.00000000000006" height="125"/>
+                                                                                                    <rect key="frame" x="1" y="0.0" width="100" height="125"/>
                                                                                                     <constraints>
                                                                                                         <constraint firstAttribute="height" constant="125" id="2cO-2E-sHL"/>
                                                                                                         <constraint firstAttribute="width" constant="100" id="U8N-sc-KIe"/>
@@ -515,6 +515,15 @@
                     <size key="freeformSize" width="375" height="1500"/>
                     <connections>
                         <outlet property="movieCastCollectionView" destination="Kb2-2E-xHw" id="R21-t0-exq"/>
+                        <outlet property="movieDirectorLabel" destination="U44-pC-g8M" id="F3D-g6-goB"/>
+                        <outlet property="movieDurationLabel" destination="NY1-y3-VKI" id="BnV-k1-44Y"/>
+                        <outlet property="moviePosterImageView" destination="r3T-k2-OgJ" id="MFv-8e-1Wk"/>
+                        <outlet property="movieRatingLabel" destination="YFd-iO-gW5" id="guY-ld-IMo"/>
+                        <outlet property="movieReleaseYearLabel" destination="jkg-Dh-ZyF" id="x2b-4U-2p0"/>
+                        <outlet property="movieStarsLabel" destination="cRG-Ss-eYy" id="ld3-ue-kpj"/>
+                        <outlet property="movieStorylineLabel" destination="m3n-g8-ons" id="6ex-jv-ABx"/>
+                        <outlet property="movieTitleLabel" destination="t5e-Pl-AEO" id="1dN-bN-TcE"/>
+                        <outlet property="movieWriterLabel" destination="9e8-8C-oLo" id="VAC-7i-Lgm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QRU-1J-LvJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
