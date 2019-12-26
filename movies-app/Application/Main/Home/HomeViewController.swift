@@ -8,14 +8,32 @@
 //
 
 import UIKit
+import RealmSwift
 
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var moviesTableView: UITableView!
+    
+    var movieStore = MovieStore()
+    
+    let realm = try! Realm()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         config()
         // Do any additional setup after loading the view.
+        getUpcommingMovies()
+    }
+    
+    func getUpcommingMovies () {
+        print(realm)
+        movieStore.fetchUpcomingMovies { (movies) in
+            guard let moviesDictionary = movies else { return }
+            for movie in moviesDictionary {
+                
+            }
+        }
     }
     
 
