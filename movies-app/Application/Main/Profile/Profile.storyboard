@@ -19,7 +19,7 @@
                                 <rect key="frame" x="33" y="229" width="348" height="210"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Oval" translatesAutoresizingMaskIntoConstraints="NO" id="KGt-Ff-FC6">
-                                <rect key="frame" x="87" y="175" width="240" height="128.00000000000003"/>
+                                <rect key="frame" x="87" y="175" width="240" height="128"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Gzu-I9-tzl">
                                 <rect key="frame" x="174" y="215" width="62" height="49"/>
