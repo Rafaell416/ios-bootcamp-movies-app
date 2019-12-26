@@ -18,6 +18,7 @@ class HomeViewController: UIViewController {
     let realm = try! Realm()
     let upcommingMoviesList = Movies()
     let topRatedMoviesList = Movies()
+    let playingNowMoviesList = Movies()
             
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,11 +26,11 @@ class HomeViewController: UIViewController {
         // Do any additional setup after loading the view.
         getUpcommingMovies()
         getTopRatedMovies()
+        getPlayingNowMovies()
         
 //        try! realm.write {
 //            realm.deleteAll()
 //        }
-//
         
         print(Realm.Configuration.defaultConfiguration)
     }
@@ -55,6 +56,18 @@ class HomeViewController: UIViewController {
             }
             try! self.realm.write {
                 self.realm.add(self.topRatedMoviesList)
+            }
+        }
+    }
+    
+    func getPlayingNowMovies() {
+        movieStore.fetchPlayingNowMovies { (playingnowMovies) in
+            guard let playingNowMoviesDictionary = playingnowMovies else { return }
+            for playingNowMovie in playingNowMoviesDictionary {
+                self.playingNowMoviesList.playingNowMovies.append(playingNowMovie)
+            }
+            try! self.realm.write {
+                self.realm.add(self.playingNowMoviesList)
             }
         }
     }

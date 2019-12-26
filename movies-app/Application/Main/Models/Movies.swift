@@ -12,4 +12,5 @@ import RealmSwift
 class Movies: Object {
     let upcommingMovies = List<Movie>()
     let topRatedMovies = List<Movie>()
+    let playingNowMovies = List<Movie>()
 }
