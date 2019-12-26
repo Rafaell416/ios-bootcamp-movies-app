@@ -16,29 +16,46 @@ class HomeViewController: UIViewController {
     
     var movieStore = MovieStore()
     let realm = try! Realm()
-    let moviesList = Movies()
-        
+    let upcommingMoviesList = Movies()
+    let topRatedMoviesList = Movies()
+            
     override func viewDidLoad() {
         super.viewDidLoad()
         config()
         // Do any additional setup after loading the view.
         getUpcommingMovies()
+        getTopRatedMovies()
+        
+//        try! realm.write {
+//            realm.deleteAll()
+//        }
+//
         
         print(Realm.Configuration.defaultConfiguration)
     }
     
-    func getUpcommingMovies () {
-        movieStore.fetchUpcomingMovies { (movies) in
-            guard let moviesDictionary = movies else { return }
-
-            for movie in moviesDictionary {
-                self.moviesList.upcommingMovies.append(movie)
+    func getUpcommingMovies() {
+        movieStore.fetchUpcomingMovies { (upcommingMovies) in
+            guard let upcommingMoviesDictionary = upcommingMovies else { return }
+            for upcommingMovie in upcommingMoviesDictionary {
+                self.upcommingMoviesList.upcommingMovies.append(upcommingMovie)
             }
-            
             try! self.realm.write {
-                self.realm.add(self.moviesList)
+                self.realm.add(self.upcommingMoviesList)
             }
             
+        }
+    }
+    
+    func getTopRatedMovies() {
+        movieStore.fetchTopRatedMovies { (topRatedMovies) in
+            guard let topRatedMoviesDictionary = topRatedMovies else { return }
+            for topRatedMovie in topRatedMoviesDictionary {
+                self.topRatedMoviesList.topRatedMovies.append(topRatedMovie)
+            }
+            try! self.realm.write {
+                self.realm.add(self.topRatedMoviesList)
+            }
         }
     }
     
