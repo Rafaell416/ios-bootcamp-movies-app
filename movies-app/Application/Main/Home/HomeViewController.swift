@@ -19,7 +19,8 @@ class HomeViewController: UIViewController {
     let upcommingMoviesList = UpcomingMovies()
     let topRatedMoviesList = TopRatedMovies()
     let playingNowMoviesList = PlayingNowMovies()
-            
+    static var shared: HomeViewController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         config()
@@ -27,12 +28,8 @@ class HomeViewController: UIViewController {
         getUpcommingMovies()
         getTopRatedMovies()
         getPlayingNowMovies()
-        
-//        try! realm.write {
-//            realm.deleteAll()
-//        }
-        
-        print(Realm.Configuration.defaultConfiguration)
+        HomeViewController.shared = self
+
     }
     
     func getUpcommingMovies() {
@@ -44,7 +41,7 @@ class HomeViewController: UIViewController {
             try! self.realm.write {
                 self.realm.add(self.upcommingMoviesList)
             }
-            
+            self.moviesTableView.reloadData()
         }
     }
     
@@ -57,6 +54,7 @@ class HomeViewController: UIViewController {
             try! self.realm.write {
                 self.realm.add(self.topRatedMoviesList)
             }
+            self.moviesTableView.reloadData()
         }
     }
     
@@ -69,10 +67,11 @@ class HomeViewController: UIViewController {
             try! self.realm.write {
                 self.realm.add(self.playingNowMoviesList)
             }
+            self.moviesTableView.reloadData()
         }
     }
     
-
+    
     func config() {
         moviesTableView.delegate = self
         moviesTableView.dataSource = self
@@ -83,6 +82,7 @@ class HomeViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         
     }
     

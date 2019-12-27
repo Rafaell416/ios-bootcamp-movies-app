@@ -17,8 +17,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="300" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BrG-8C-1cd">
-                                <rect key="frame" x="0.0" y="88" width="375" height="690"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="641"/>
+                                <color key="backgroundColor" red="0.1137254902" green="0.10980392160000001" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="moviesTableViewCell" rowHeight="400" id="4UH-7Q-QR9" customClass="MoviesTableViewCell" customModule="movies_app" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="400"/>
@@ -167,6 +167,7 @@
                                                                                 <outlet property="movieCharacteristicsLabel" destination="1O6-Pn-2aa" id="haz-Nt-LS7"/>
                                                                                 <outlet property="moviePosterButton" destination="20O-uC-DfE" id="PFE-53-vHi"/>
                                                                                 <outlet property="movieTitleLabel" destination="9XL-8C-SkT" id="mtC-7g-Na2"/>
+                                                                                <outlet property="movieVoteRatingLabel" destination="XFF-Dx-kbu" id="lKr-DD-dRc"/>
                                                                                 <outlet property="movieYearLabel" destination="Bcy-RD-baX" id="AFj-fS-6ra"/>
                                                                                 <outlet property="movieYearView" destination="IwK-V2-7Lu" id="wGP-MX-Trf"/>
                                                                             </connections>
@@ -193,6 +194,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="listTypeLabel" destination="oWd-tK-0hN" id="go4-15-42D"/>
                                             <outlet property="sectionCollectionView" destination="mLJ-FW-tkl" id="cPl-rt-pzL"/>
                                         </connections>
                                     </tableViewCell>
@@ -209,6 +211,7 @@
                         <viewLayoutGuide key="safeArea" id="u5A-0n-iOg"/>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="XoP-pa-RPi"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="moviesTableView" destination="BrG-8C-1cd" id="y5H-gH-8Xn"/>
                     </connections>
@@ -226,7 +229,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Zp-24-ala">
-                                <rect key="frame" x="0.0" y="140" width="375" height="1326"/>
+                                <rect key="frame" x="0.0" y="140" width="375" height="1277"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="cl9-8m-m6X">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1046"/>
@@ -548,12 +551,13 @@
             </objects>
             <point key="canvasLocation" x="3040.8000000000002" y="-572.66009852216746"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="h38-uU-xGV">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="e1l-4g-9li" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Mmk-wE-XEE"/>
+                    <tabBarItem key="tabBarItem" title="" image="house" catalog="system" id="Mmk-wE-XEE"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="plM-OS-dC2">
                         <rect key="frame" x="0.0" y="44" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -580,6 +584,7 @@
     </scenes>
     <resources>
         <image name="arrow.left" catalog="system" width="64" height="48"/>
+        <image name="house" catalog="system" width="64" height="54"/>
         <image name="joaquin" width="214" height="317"/>
         <image name="joker-poster" width="980" height="1453"/>
         <image name="star.fill" catalog="system" width="64" height="58"/>

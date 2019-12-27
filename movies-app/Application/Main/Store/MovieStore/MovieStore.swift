@@ -10,6 +10,23 @@ import ObjectMapper
 import Alamofire
 
 struct MovieStore {
+    
+    func fetchMovies(_ route: String, _ method: HTTPMethod, _ completion: @escaping(_ movies: [Movie]?) -> Void) {
+        let movies = "\(Config.baseURL)\(route)?api_key=\(Config.apiKey)&language=en-US&page=1"
+        AF.request(movies, method: method, encoding: JSONEncoding.default).validate().responseJSON { (response) in
+            if let value = response.value as? [String: Any] {
+                let result = Mapper<Result>().map(JSON: value)
+                DispatchQueue.main.async {
+                    completion(result?.result)
+                }
+            } else {
+                DispatchQueue.main.async {
+                    completion(nil)
+                }
+            }
+        }
+    }
+    
     func fetchUpcomingMovies(_ completion: @escaping(_ movies: [Movie]?) -> Void) {
         let upcomingMovies = "\(Config.baseURL)/upcoming?api_key=\(Config.apiKey)&language=en-US&page=1"
         AF.request(upcomingMovies, method: .get, encoding: JSONEncoding.default).validate().responseJSON { (response) in

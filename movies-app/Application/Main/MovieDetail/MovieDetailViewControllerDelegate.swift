@@ -16,11 +16,11 @@ extension MovieDetailViewController: UICollectionViewDelegate, UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(indexPath.row)
+
     }
         
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: MovieDetailCollectionViewCell = movieCastCollectionView.dequeueReusableCell(withReuseIdentifier: "movieCastCollectionViewCell", for: indexPath) as! MovieDetailCollectionViewCell
+        let cell: MovieDetailCollectionViewCell = movieCastCollectionView?.dequeueReusableCell(withReuseIdentifier: "movieCastCollectionViewCell", for: indexPath) as! MovieDetailCollectionViewCell
         return cell
         
         
