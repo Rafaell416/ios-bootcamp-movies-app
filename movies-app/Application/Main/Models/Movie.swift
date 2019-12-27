@@ -31,25 +31,43 @@
  */
 
 import ObjectMapper
+import Foundation
+import RealmSwift
 
-public struct Movie: Mappable {
-    public init?(map: Map) {}
-    public init() {}
-        
-    public var popularity: Float = 0.0
-    public var vote_count: Int = 0
-    public var video: Bool = false
-    public var poster_path: String = ""
-    public var id: Int = 0
-    public var adult: Bool = false
-    public var backdrop_path: String = ""
-    public var original_language: String = ""
-    public var original_title: String = ""
-    public var genre_ids: [Int] = []
-    public var title: String = ""
-    public var vote_average: Float = 0.0
-    public var overview: String = ""
-    public var release_date: String = ""
+class Movie: Object, Mappable {
     
-    public mutating func mapping(map: Map) {}
+    @objc dynamic var popularity: Float = 0.0
+    @objc dynamic var voteCount: Int = 0
+    @objc dynamic var video: Bool = false
+    @objc dynamic var posterPath: String = ""
+    @objc dynamic var id: Int = 0
+    @objc dynamic var adult: Bool = false
+    @objc dynamic var backdropPath: String = ""
+    @objc dynamic var originalLanguage: String = ""
+    @objc dynamic var originalTitle: String = ""
+    //var genreIds: [Int] = []
+    @objc dynamic var title: String = ""
+    @objc dynamic var voteAverage: Float = 0.0
+    @objc dynamic var overview: String = ""
+    @objc dynamic var releaseDate: String = ""
+    
+    required convenience init?(map: Map) {
+        self.init()
+    }
+    
+    func mapping(map: Map) {
+        popularity <- map["popularity"]
+        voteCount <- map["vote_count"]
+        video <- map["video"]
+        posterPath <- map["poster_path"]
+        id <- map["id"]
+        adult <- map["adult"]
+        backdropPath <- map["backdrop_path"]
+        originalLanguage <- map["original_language"]
+        originalTitle <- map["original_title"]
+        title <- map["title"]
+        voteAverage <- map["vote_average"]
+        overview <- map["overview"]
+        releaseDate <- map["release_date"]
+    }
 }

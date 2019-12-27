@@ -7,14 +7,17 @@
 //
 
 import ObjectMapper
+import RealmSwift
 
-public struct Result: Mappable {
-    public init?(map: Map) {}
-    public init() {}
+class Result: Object, Mappable {
         
-    public var result: [Movie] = []
+    var result: [Movie] = []
     
-    public mutating func mapping(map: Map) {
+    required convenience init?(map: Map) {
+        self.init()
+    }
+    
+    func mapping(map: Map) {
         result <- map["results"]
     }
 }
