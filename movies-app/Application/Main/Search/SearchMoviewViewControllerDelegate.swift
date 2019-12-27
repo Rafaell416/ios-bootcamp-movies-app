@@ -22,10 +22,10 @@ extension SearchMovieViewController: UICollectionViewDelegate, UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: CategoriesCollectionViewCell = categoriesCollectionView.dequeueReusableCell(withReuseIdentifier: "movieCategoryCollectionViewCell", for: indexPath) as! CategoriesCollectionViewCell
         cell.layer.cornerRadius = 10
-
         cell.categoryImageView.setTransformRotation(toDegrees: 30)
         
         let movieCategory = movieCategories[indexPath.row]
+        cell.categoryContainerView.layer.backgroundColor = colors[indexPath.row].cgColor
         cell.categoryLabel.text = movieCategory
         return cell
     }

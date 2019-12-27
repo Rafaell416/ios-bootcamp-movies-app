@@ -10,7 +10,7 @@ import UIKit
 
 class MovieDetailViewController: UIViewController {
 
-    @IBOutlet weak var moviePosterImageView: UIView!
+    @IBOutlet weak var moviePosterImageView: UIImageView!
     @IBOutlet weak var movieTitleLabel: UILabel!
     @IBOutlet weak var movieStarsLabel: UILabel!
     @IBOutlet weak var movieReleaseYearLabel: UILabel!
@@ -20,6 +20,7 @@ class MovieDetailViewController: UIViewController {
     @IBOutlet weak var movieCastCollectionView: UICollectionView!
     @IBOutlet weak var movieWriterLabel: UILabel!
     @IBOutlet weak var movieDirectorLabel: UILabel!
+    @IBOutlet weak var backButton: UIButton!
     
     
     override func viewDidLoad() {
@@ -28,8 +29,13 @@ class MovieDetailViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func goBack(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+         navigationController?.setNavigationBarHidden(false, animated: true)
+    }
     func config() {
-
+        backButton.layer.cornerRadius = backButton.frame.width / 2
+        navigationController?.setNavigationBarHidden(true, animated: true)
         movieCastCollectionView.delegate = self
         movieCastCollectionView.dataSource = self
     }

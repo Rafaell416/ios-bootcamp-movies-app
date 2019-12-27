@@ -17,18 +17,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="exq-ZY-xQp">
-                                <rect key="frame" x="20" y="160" width="374" height="56"/>
+                                <rect key="frame" x="10" y="160" width="394" height="56"/>
                                 <subviews>
                                     <searchBar contentMode="redraw" barStyle="black" searchBarStyle="minimal" placeholder="Movies, Categories, or TV Shows" translatesAutoresizingMaskIntoConstraints="NO" id="BSU-mo-aDK">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="56"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="E7c-OP-jst"/>
+                                        </constraints>
+                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                                     </searchBar>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="BSU-mo-aDK" secondAttribute="bottom" id="9Ne-QL-FnQ"/>
-                                    <constraint firstAttribute="trailing" secondItem="BSU-mo-aDK" secondAttribute="trailing" id="XxW-oY-z25"/>
-                                    <constraint firstItem="BSU-mo-aDK" firstAttribute="leading" secondItem="exq-ZY-xQp" secondAttribute="leading" id="cL4-Ax-5nY"/>
-                                    <constraint firstItem="BSU-mo-aDK" firstAttribute="top" secondItem="exq-ZY-xQp" secondAttribute="top" id="dwM-8Y-dkw"/>
+                                    <constraint firstAttribute="bottom" secondItem="BSU-mo-aDK" secondAttribute="bottom" id="PAd-Zf-wrG"/>
+                                    <constraint firstItem="BSU-mo-aDK" firstAttribute="leading" secondItem="exq-ZY-xQp" secondAttribute="leading" id="eui-lJ-WaC"/>
+                                    <constraint firstItem="BSU-mo-aDK" firstAttribute="top" secondItem="exq-ZY-xQp" secondAttribute="top" id="fgJ-kV-14C"/>
+                                    <constraint firstAttribute="trailing" secondItem="BSU-mo-aDK" secondAttribute="trailing" id="jZg-j6-Suf"/>
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="V7W-0T-BeE">
@@ -97,6 +100,7 @@
                                         <color key="backgroundColor" red="0.0" green="0.10980392156862745" blue="0.33333333333333331" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <size key="customSize" width="165" height="100"/>
                                         <connections>
+                                            <outlet property="categoryContainerView" destination="raG-Vo-FA8" id="vhJ-dP-GIN"/>
                                             <outlet property="categoryImageView" destination="OH4-D7-dXq" id="O1O-Hd-xKe"/>
                                             <outlet property="categoryLabel" destination="Jh5-aW-iE1" id="CB0-6f-cJy"/>
                                         </connections>
@@ -104,7 +108,7 @@
                                 </cells>
                             </collectionView>
                             <containerView hidden="YES" opaque="NO" contentMode="scaleToFill" id="gDT-kL-v6E">
-                                <rect key="frame" x="20" y="236" width="374" height="594"/>
+                                <rect key="frame" x="20" y="236" width="373" height="606"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <segue destination="LtI-UA-BjN" kind="embed" identifier="showMovieResults" id="qjC-YE-KIS"/>
@@ -113,21 +117,18 @@
                         </subviews>
                         <color key="backgroundColor" red="0.11372549019607843" green="0.10980392156862745" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="q3r-De-py1" firstAttribute="trailing" secondItem="exq-ZY-xQp" secondAttribute="trailing" constant="20" id="5Lk-VS-Dv6"/>
-                            <constraint firstItem="gDT-kL-v6E" firstAttribute="top" secondItem="exq-ZY-xQp" secondAttribute="bottom" constant="20" id="Nyn-P5-xHN"/>
-                            <constraint firstItem="V7W-0T-BeE" firstAttribute="leading" secondItem="q3r-De-py1" secondAttribute="leading" constant="20" id="R8l-eF-jdq"/>
+                            <constraint firstItem="exq-ZY-xQp" firstAttribute="leading" secondItem="q3r-De-py1" secondAttribute="leading" constant="10" id="9nr-oq-ReQ"/>
+                            <constraint firstItem="exq-ZY-xQp" firstAttribute="top" secondItem="q3r-De-py1" secondAttribute="top" constant="20" id="Cmb-qg-MoV"/>
+                            <constraint firstItem="q3r-De-py1" firstAttribute="trailing" secondItem="exq-ZY-xQp" secondAttribute="trailing" constant="10" id="KPf-3U-HIj"/>
+                            <constraint firstItem="V7W-0T-BeE" firstAttribute="top" secondItem="exq-ZY-xQp" secondAttribute="bottom" constant="20" id="VNm-eY-D25"/>
                             <constraint firstItem="V7W-0T-BeE" firstAttribute="leading" secondItem="q3r-De-py1" secondAttribute="leading" constant="20" id="Vj5-me-mQ2"/>
+                            <constraint firstItem="gDT-kL-v6E" firstAttribute="top" secondItem="exq-ZY-xQp" secondAttribute="bottom" constant="20" id="dOF-Dp-JNO"/>
                             <constraint firstItem="q3r-De-py1" firstAttribute="bottom" secondItem="V7W-0T-BeE" secondAttribute="bottom" constant="20" id="jzJ-Wo-p9l"/>
-                            <constraint firstItem="q3r-De-py1" firstAttribute="bottom" secondItem="V7W-0T-BeE" secondAttribute="bottom" constant="20" id="l6v-WI-XAn"/>
-                            <constraint firstItem="exq-ZY-xQp" firstAttribute="leading" secondItem="q3r-De-py1" secondAttribute="leading" constant="20" id="lg0-cf-D91"/>
                             <constraint firstItem="q3r-De-py1" firstAttribute="trailing" secondItem="V7W-0T-BeE" secondAttribute="trailing" constant="20" id="rAc-vW-EGI"/>
-                            <constraint firstItem="exq-ZY-xQp" firstAttribute="top" secondItem="q3r-De-py1" secondAttribute="top" constant="20" id="s0N-yS-0JS"/>
-                            <constraint firstItem="V7W-0T-BeE" firstAttribute="top" secondItem="exq-ZY-xQp" secondAttribute="bottom" constant="20" id="sOm-g3-uIW"/>
-                            <constraint firstItem="q3r-De-py1" firstAttribute="trailing" secondItem="V7W-0T-BeE" secondAttribute="trailing" constant="20" id="vy1-0u-jwM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="q3r-De-py1"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Search" id="dEM-hl-c83"/>
+                    <navigationItem key="navigationItem" title="Search" largeTitleDisplayMode="always" id="dEM-hl-c83"/>
                     <connections>
                         <outlet property="categoriesCollectionView" destination="V7W-0T-BeE" id="Zzl-WO-h3C"/>
                         <outlet property="movieResultsContainer" destination="gDT-kL-v6E" id="pjV-S5-oKQ"/>
@@ -165,11 +166,11 @@
             <objects>
                 <viewController id="LtI-UA-BjN" customClass="MovieResultsViewController" customModule="movies_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tTz-be-clF">
-                        <rect key="frame" x="0.0" y="0.0" width="374" height="594"/>
+                        <rect key="frame" x="0.0" y="0.0" width="373" height="522"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SwF-SM-dJP">
-                                <rect key="frame" x="0.0" y="0.0" width="374" height="594"/>
+                                <rect key="frame" x="0.0" y="0.0" width="374" height="522"/>
                                 <color key="backgroundColor" red="0.11372549019607843" green="0.10980392156862745" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="5F0-cb-gGG">
                                     <size key="itemSize" width="140" height="200"/>

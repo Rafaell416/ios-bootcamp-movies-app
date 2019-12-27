@@ -11,11 +11,12 @@ import UIKit
 extension MovieResultsViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: MovieResultsCollectionViewCell = movieResultsCollectionView.dequeueReusableCell(withReuseIdentifier: "movieResultsCollectionViewCell", for: indexPath) as! MovieResultsCollectionViewCell
+        cell.layer.cornerRadius = 10
         
         return cell
     }
