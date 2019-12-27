@@ -8,9 +8,11 @@
 
 import UIKit
 
-class SearchMovieViewController: UIViewController {
-
+class SearchMovieViewController: UIViewController, UISearchBarDelegate {
+    
+    @IBOutlet weak var movieSearchBar: UISearchBar!
     @IBOutlet weak var categoriesCollectionView: UICollectionView!
+    @IBOutlet weak var movieResultsContainer: UIView!
     
     let movieCategories = ["Action", "Horror", "Comedy", "Romance", "Thriller", "Drama", "Animated", "Fantasy", "Historical", "Science Fiction", "Adenture", "Documentary", "Fantasy"].sorted()
     
@@ -19,11 +21,23 @@ class SearchMovieViewController: UIViewController {
         config()
     }
     
-    
-    
     func config() {
+        movieSearchBar.delegate = self
         categoriesCollectionView.delegate = self
         categoriesCollectionView.dataSource = self
+    }
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        navigationController?.setNavigationBarHidden(true, animated: true)
+        movieResultsContainer.isHidden = false
+        movieSearchBar.showsCancelButton = true
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.endEditing(true)
+        navigationController?.setNavigationBarHidden(false, animated: false)
+        movieResultsContainer.isHidden = true
+        movieSearchBar.showsCancelButton = false
     }
 }
 

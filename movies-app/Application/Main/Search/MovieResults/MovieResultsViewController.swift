@@ -14,7 +14,7 @@ class MovieResultsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        config()
         // Do any additional setup after loading the view.
     }
     
