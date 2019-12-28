@@ -37,4 +37,7 @@ extension SearchMovieViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
     }
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        print("pressed entered")
+    }
 }

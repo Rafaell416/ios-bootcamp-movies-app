@@ -17,6 +17,9 @@
 		0D9091D823B65F2600803031 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D9091D323B65F2500803031 /* ObjectMapper.framework */; };
 		0D9091D923B65F2600803031 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D9091D423B65F2500803031 /* Alamofire.framework */; };
 		0D9091DA23B65F2600803031 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D9091D523B65F2500803031 /* RealmSwift.framework */; };
+		0DB9A13323B6B35000FFF672 /* MovieDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB9A13223B6B35000FFF672 /* MovieDetails.swift */; };
+		0DB9A13523B6B3F900FFF672 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB9A13423B6B3F900FFF672 /* Genre.swift */; };
+		0DB9A13723B6BB5D00FFF672 /* Cast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB9A13623B6BB5D00FFF672 /* Cast.swift */; };
 		0DCB751523B14DD0001843B0 /* MoviesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCB751323B14DD0001843B0 /* MoviesCollectionViewCell.swift */; };
 		0DCB751823B152B7001843B0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCB751723B152B7001843B0 /* HomeViewController.swift */; };
 		0DCB751E23B17B61001843B0 /* MoviesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCB751D23B17B61001843B0 /* MoviesTableViewCell.swift */; };
@@ -82,6 +85,9 @@
 		0D9091D323B65F2500803031 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = SOURCE_ROOT; };
 		0D9091D423B65F2500803031 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = SOURCE_ROOT; };
 		0D9091D523B65F2500803031 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = SOURCE_ROOT; };
+		0DB9A13223B6B35000FFF672 /* MovieDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetails.swift; sourceTree = "<group>"; };
+		0DB9A13423B6B3F900FFF672 /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
+		0DB9A13623B6BB5D00FFF672 /* Cast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cast.swift; sourceTree = "<group>"; };
 		0DCB751323B14DD0001843B0 /* MoviesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesCollectionViewCell.swift; sourceTree = "<group>"; };
 		0DCB751723B152B7001843B0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0DCB751D23B17B61001843B0 /* MoviesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTableViewCell.swift; sourceTree = "<group>"; };
@@ -436,6 +442,9 @@
 				19962D8C23B564EA00C77882 /* UpcomingMovies.swift */,
 				19962D8E23B564FC00C77882 /* PlayingNowMovies.swift */,
 				19962D9023B5652200C77882 /* TopRatedMovies.swift */,
+				0DB9A13223B6B35000FFF672 /* MovieDetails.swift */,
+				0DB9A13423B6B3F900FFF672 /* Genre.swift */,
+				0DB9A13623B6BB5D00FFF672 /* Cast.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -619,16 +628,19 @@
 				19962D8F23B564FC00C77882 /* PlayingNowMovies.swift in Sources */,
 				19465CDC23B50D61002A36B7 /* MovieStore.swift in Sources */,
 				19465CDA23B50D41002A36B7 /* Result.swift in Sources */,
+				0DB9A13523B6B3F900FFF672 /* Genre.swift in Sources */,
 				19962D8D23B564EA00C77882 /* UpcomingMovies.swift in Sources */,
 				19962D9123B5652200C77882 /* TopRatedMovies.swift in Sources */,
 				0DE8002823B400DB006CB4CC /* MovieDetailViewControllerDelegate.swift in Sources */,
 				0DE8003323B4F911006CB4CC /* SearchMoviewViewControllerDelegate.swift in Sources */,
 				0DE8002E23B49044006CB4CC /* SearchMovieViewController.swift in Sources */,
+				0DB9A13323B6B35000FFF672 /* MovieDetails.swift in Sources */,
 				192DB19623B11C4D009CD6F5 /* AppDelegate.swift in Sources */,
 				0D9091CB23B5A07B00803031 /* ViewExtensions.swift in Sources */,
 				0DCB752023B1B52C001843B0 /* HomeViewControllerDelegate.swift in Sources */,
 				0DE8003123B4F832006CB4CC /* CategoriesCollectionViewCell.swift in Sources */,
 				0DE8002A23B40A31006CB4CC /* MovieDetailCollectionView.swift in Sources */,
+				0DB9A13723B6BB5D00FFF672 /* Cast.swift in Sources */,
 				19465CD923B50D41002A36B7 /* Movie.swift in Sources */,
 				192DB19823B11C4D009CD6F5 /* SceneDelegate.swift in Sources */,
 				0D9091CE23B5B78700803031 /* SearchBarDelegate.swift in Sources */,

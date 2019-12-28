@@ -74,4 +74,36 @@ struct MovieStore {
             }
         }
     }
+    
+    func fetchMovieDetails(_ id: Int, _ completion: @escaping(_ movies: MovieDetails?) -> Void) {
+        let movieDetailsURL = "\(Config.baseURL)/\(id)?api_key=\(Config.apiKey)&append_to_response=credits"
+        AF.request(movieDetailsURL, method: .get, encoding: JSONEncoding.default).validate().responseJSON { (response) in
+            if let value = response.value as? [String: Any] {
+                let result = Mapper<MovieDetails>().map(JSON: value)
+                DispatchQueue.main.async {
+                    completion(result)
+                }
+            } else {
+                DispatchQueue.main.async {
+                    completion(nil)
+                }
+            }
+        }
+    }
+    
+    func fetchMovieByQuery(_ query: String, _ id: Int, _ completion: @escaping(_ movies: Movie?) -> Void) {
+        let movieDetailsURL = "https://api.themoviedb.org/3/search/movie?language=en-US&query=\(query)"
+        AF.request(movieDetailsURL, method: .get, encoding: JSONEncoding.default).validate().responseJSON { (response) in
+            if let value = response.value as? [String: Any] {
+                let result = Mapper<Movie>().map(JSON: value)
+                DispatchQueue.main.async {
+                    completion(result)
+                }
+            } else {
+                DispatchQueue.main.async {
+                    completion(nil)
+                }
+            }
+        }
+    }
 }

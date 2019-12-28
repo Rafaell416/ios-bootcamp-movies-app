@@ -15,7 +15,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var moviesTableView: UITableView!
     
     var movieStore = MovieStore()
-    let realm = try! Realm()
+    let realm = try? Realm()
     let upcommingMoviesList = UpcomingMovies()
     let topRatedMoviesList = TopRatedMovies()
     let playingNowMoviesList = PlayingNowMovies()
@@ -38,8 +38,8 @@ class HomeViewController: UIViewController {
             for upcommingMovie in upcommingMoviesDictionary {
                 self.upcommingMoviesList.movies.append(upcommingMovie)
             }
-            try! self.realm.write {
-                self.realm.add(self.upcommingMoviesList)
+            try! self.realm?.write {
+                self.realm?.add(self.upcommingMoviesList)
             }
             self.moviesTableView.reloadData()
         }
@@ -51,8 +51,8 @@ class HomeViewController: UIViewController {
             for topRatedMovie in topRatedMoviesDictionary {
                 self.topRatedMoviesList.movies.append(topRatedMovie)
             }
-            try! self.realm.write {
-                self.realm.add(self.topRatedMoviesList)
+            try! self.realm?.write {
+                self.realm?.add(self.topRatedMoviesList)
             }
             self.moviesTableView.reloadData()
         }
@@ -64,8 +64,8 @@ class HomeViewController: UIViewController {
             for playingNowMovie in playingNowMoviesDictionary {
                 self.playingNowMoviesList.movies.append(playingNowMovie)
             }
-            try! self.realm.write {
-                self.realm.add(self.playingNowMoviesList)
+            try! self.realm?.write {
+                self.realm?.add(self.playingNowMoviesList)
             }
             self.moviesTableView.reloadData()
         }

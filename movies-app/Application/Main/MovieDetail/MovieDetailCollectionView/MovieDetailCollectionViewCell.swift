@@ -10,7 +10,7 @@ import UIKit
 
 class MovieDetailCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var castImagevIEW: UIImageView!
+    @IBOutlet weak var castImageView: UIImageView!
     @IBOutlet weak var castNameLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
