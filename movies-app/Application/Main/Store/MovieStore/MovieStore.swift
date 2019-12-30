@@ -91,13 +91,13 @@ struct MovieStore {
         }
     }
     
-    func fetchMovieByQuery(_ query: String, _ id: Int, _ completion: @escaping(_ movies: Movie?) -> Void) {
-        let movieDetailsURL = "https://api.themoviedb.org/3/search/movie?language=en-US&query=\(query)"
+    func fetchMovieByQuery(_ query: String, _ completion: @escaping(_ movies: [Movie]?) -> Void) {
+        let movieDetailsURL = "https://api.themoviedb.org/3/search/movie?api_key=\(Config.apiKey)&language=en-US&query=\(query)"
         AF.request(movieDetailsURL, method: .get, encoding: JSONEncoding.default).validate().responseJSON { (response) in
             if let value = response.value as? [String: Any] {
-                let result = Mapper<Movie>().map(JSON: value)
+                let result = Mapper<Result>().map(JSON: value)
                 DispatchQueue.main.async {
-                    completion(result)
+                    completion(result?.result)
                 }
             } else {
                 DispatchQueue.main.async {

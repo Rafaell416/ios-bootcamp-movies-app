@@ -12,9 +12,17 @@ class MovieResultsViewController: UIViewController {
     
     @IBOutlet weak var movieResultsCollectionView: UICollectionView!
     
+    static var shared: MovieResultsViewController?
+    var movies: [Movie] = [] {
+        didSet {
+            movieResultsCollectionView.reloadData()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         config()
+        MovieResultsViewController.shared = self
         // Do any additional setup after loading the view.
     }
     

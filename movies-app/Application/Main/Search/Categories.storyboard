@@ -168,11 +168,11 @@
             <objects>
                 <viewController id="LtI-UA-BjN" customClass="MovieResultsViewController" customModule="movies_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tTz-be-clF">
-                        <rect key="frame" x="0.0" y="0.0" width="373" height="606"/>
+                        <rect key="frame" x="0.0" y="0.0" width="374" height="606"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SwF-SM-dJP">
-                                <rect key="frame" x="0.0" y="0.0" width="373" height="606"/>
+                                <rect key="frame" x="0.0" y="0.0" width="374" height="606"/>
                                 <color key="backgroundColor" red="0.11372549019607843" green="0.10980392156862745" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="5F0-cb-gGG">
                                     <size key="itemSize" width="140" height="200"/>

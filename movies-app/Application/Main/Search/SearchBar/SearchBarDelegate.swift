@@ -10,6 +10,8 @@ import UIKit
 
 extension SearchMovieViewController: UISearchBarDelegate {
     
+    
+    
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         navigationController?.setNavigationBarHidden(true, animated: true)
         movieResultsContainer.isHidden = false
@@ -24,7 +26,8 @@ extension SearchMovieViewController: UISearchBarDelegate {
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchBar.endEditing(true)
         self.navigationController?.setNavigationBarHidden(false, animated: true)
-        
+        searchBar.text = ""
+        MovieResultsViewController.shared?.movies = []
         UIView.animate(withDuration: 0.2, delay: 0, options: .transitionCurlUp, animations: {
             self.view.layoutIfNeeded()
         }) { (isCompleted) in
@@ -34,10 +37,13 @@ extension SearchMovieViewController: UISearchBarDelegate {
         }
     }
     
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        
-    }
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        print("pressed entered")
+        movieStore.fetchMovieByQuery(searchBar.text ?? "") { (movies) in
+            if let movies = movies {
+                MovieResultsViewController.shared?.movies = movies
+            }
+            
+        }
+        
     }
 }

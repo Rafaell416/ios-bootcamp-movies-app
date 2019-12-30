@@ -14,6 +14,7 @@ class SearchMovieViewController: UIViewController {
     @IBOutlet weak var categoriesCollectionView: UICollectionView!
     @IBOutlet weak var movieResultsContainer: UIView!
     
+    var movieStore = MovieStore()
     var movies: [Movie] = []
     
     let movieCategories = ["Action", "Horror", "Comedy", "Romance", "Thriller", "Drama", "Animated", "Fantasy", "Historical", "Science Fiction", "Adenture", "Documentary", "Fantasy"].sorted()
