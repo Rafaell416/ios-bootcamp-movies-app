@@ -31,12 +31,12 @@ extension MovieResultsViewController: UICollectionViewDelegate, UICollectionView
         return CGSize(width: collectionViewSize/3, height: 150)
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let movie = movies[indexPath.row]
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "movieDetail") as! MovieDetailViewController
-        vc.movieId = movie.id
-        self.navigationController?.pushViewController(vc, animated: true)
-    }
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        let movie = movies[indexPath.row]
+//        let vc = self.storyboard?.instantiateViewController(withIdentifier: "movieDetail") as! MovieDetailViewController
+//        vc.movieId = movie.id
+//        self.navigationController?.pushViewController(vc, animated: true)
+//    }
     
     
 }
